@@ -1,0 +1,203 @@
+<rwt:include template="Social"></rwt:include>
+<header class="main-banner">
+	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/Breacehed_ICS_New.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:'BREACHED! Night of Worship',cover:'/files/OCHF/1A_2021_BREACHED/2023_Breached_Worship_Night.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/2021_LOGOS/breached_logo_wht_final.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
+	</rwt:slider-widget>
+</header>
+<rwt:include template="Header"></rwt:include>
+<style>
+	.welcome {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	
+	.welcomeTitle {
+		flex: 1;
+		text-align: center;
+	}
+	
+	.welcomeMedia {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 10px;
+		justify-content: center;
+	}
+	
+	.welcomeMediaElement {
+		position: relative;
+		width: 100%;
+		padding-top: 56.25%;
+		max-width: 300px;
+	}
+	
+	.welcomeMediaElement iframe,
+	.welcomeMediaElement img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		padding: 10px;
+	}
+	
+	.welcomeMediaElement img {
+		object-fit: cover;
+	}
+	
+	@media (min-width: 768px) {
+		.welcomeMedia {
+			flex-direction: row;
+		}
+		
+		.welcomeMediaElement {
+			width: 49%;
+			max-width: none;
+		}
+	}
+	
+	.mission {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: #ADC3DA;
+		gap: 20px;
+		margin: 10px;
+		padding: 20px;
+	}
+	
+	.announcements {
+		background-color: #424242;
+		color: white;
+		padding: 15px;
+		margin: 0 10px 10px 10px;
+	}
+	
+	.themes {
+		display: flex;
+		flex-direction: column;
+		margin: 10px;
+		align-items: center;
+	}
+</style>
+<section class="welcome">
+	<h2 class="welcomeTitle">We are so glad you stopped by!</h2>
+	<div class="welcomeMedia">
+		<div class="welcomeMediaElement"> <iframe src="https://www.youtube.com/embed/s04A-TYibok?si=epEHTZTFpWusChio?"></iframe> </div>
+		<div class="welcomeMediaElement"> <img src="/files/OCHF/1A_2021_BREACHED/Breached.jpg" role="presentation" alt=""> </div>
+	</div>
+</section>
+<section class="mission">
+	<h4 style="font-size: 30px; font-weight: bold; flex: 100%; text-align: center;">The Breached Young Adult Mission</h4>
+	<div style="flex: 40%; display: inline;">
+		<h4 style="font-size: 25px; font-weight: bold">Our Vision</h4>
+		<p style="font-size: 20px;">To connect with young adults, build them in spirit-empowered living, and equip them to build up others in the same way.</p>
+		<h4 style="font-size: 25px; font-weight: bold">Our Purpose</h4>
+		<p style="font-size: 20px;">For every member to grow in their God-given abilities in order to show their communities who Jesus is.&nbsp;</p> <br>
+		<h4 style="font-size: 25px; font-weight: bold">Let's Connect</h4>
+		<form action="/submit_form" method="post" style="display: flex; flex-direction: column; gap: 10px;"> <label for="name">Name:</label> <input type="text" id="name" name="name" style="height: 40px;"> <label for="email">Email:</label> <input type="email" id="email" name="email" style="height: 40px;"> <label for="sms">Phone Number:</label> <input type="tel" id="sms" name="sms" style="height: 40px;"> <label for="text">Tell us something!</label> <input type="text" id="shortAnswer" placeholder="prayer request, testimony, topic, event suggestion"> <input type="submit" value="Submit" style="width: 200px; margin: auto;"> </form>
+	</div>
+	<div style="flex: 40%;">
+		<h4 style="font-size: 25px; font-weight: bold">Get Started</h4>
+		<ul style="flex: 100%; color: dark blue; font-size: 20px;">
+			<li>
+				<h6>Beginners guide to spiritual fasting | <a href="https://pastorvlad.org/resources/fastingpdf/" style="color: white;">Web&nbsp;</a></h6>
+			</li>
+			<li>
+				<h6>RightNow Media App | <a href="https://app.rightnowmedia.org/login/init" style="color: white;">Web</a></h6>
+			</li>
+			<li>
+				<h6>Bible plans/community/studies | <a href="https://www.bible.com/" style="color: white;">App</a> | <a href="https://www.bible.com/bible/59/JHN.1.ESV" style="color: white;">Web 1 |</a> <a href="https://www.blueletterbible.org/" style="color: white;">Web 2</a></h6>
+			</li>
+			<li>
+				<h6>RealFaith App | <a href="https://realfaith.com/" style="color: white;">Web</a></h6>
+			</li>
+			<li>
+				<h6>Creation/Evolution | <a href="https://creation.com/" style="color: white;">Web</a></h6>
+			</li>
+			<li>
+				<h6>Finances App | <a href="https://www.ramseysolutions.com/" style="color: white;">Web</a> | Podcast | Youtube</h6>
+			</li>
+			<li>
+				<h6>Mental Health Podcast | Youtube | <a href="https://www.ramseysolutions.com/john-delony" style="color: white;">Web</a></h6>
+			</li>
+			<li>
+				<h6>Career and Life | <a href="https://www.ramseysolutions.com/ken-coleman" style="color: white;">Web</a> | Podcast | Youtube</h6>
+			</li>
+			<li>
+				<h6>Spiritual Growth <a href="https://pastorvlad.org/resources/" style="color: white;">Web</a>&nbsp;</h6>
+			</li>
+			<li>
+				<h6>Spiritual Warfare <a href="https://johnramirez.org/" style="color: white;">Web</a> | <a href="https://johnramirez.org/media/" style="color: white;">Video</a> | Youtube</h6>
+			</li>
+			<li>
+				<h6>Evangelism <a href="https://livingwaters.com/" style="color: white;">Web</a> | Youtube</h6>
+			</li>
+			<li>
+				<h6>Lifestyle Christianity | <a href="https://lifestylechristianity.com/" style="color: white;">Web</a> | Youtube</h6>
+			</li>
+		</ul>
+		<h6 style="flex: 100%; color: white;"><a href="BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
+	</div>
+</section>
+<section class="announcements">
+	<div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 20px; padding: 20px;">
+		<h2 style="font-size: 30px; font-weight: bold; flex: 100%; text-align: center;"> Announcements </h2>
+		<div style="flex: 50%; border: 4px solid white; padding: 20px;">
+			<h2 style="font-size: 2.5rem"> Ice Cream Sunday's Next Spot - <a href="https://forms.gle/ALQFb4d48XsJkNaaA">Click here and VOTE NOW!</a></h2>
+		</div>
+		<div style="flex: 50%; border: 4px solid white;">
+			<ul style="font-size: 2rem; font-weight: bold; padding: 20px; list-style-type: none; line-height: 28px;">
+				<li style="font-size: 2.5rem;">BREACHED Night of Worship</li>
+				<li>Everyone is invited! Bring a friend</li>
+				<li>Friday July 26 7:30pm-9:30pm</li>
+			</ul>
+		</div>
+		<div style="flex: 50%; border: 4px solid white;">
+			<ul style="font-size: 2rem; font-weight: bold; padding: 20px; list-style-type: none; line-height: 28px;">
+				<li style="font-size: 2.5rem;">July 2024! Fasting for the month of August</li>
+				<p>EACH MONTH, we pray and fast for the UPCOMING month. The young adults of Celebration Orange County Gospel Fellowship FAST REGULARLY</p>
+				<li><a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link">(Click HERE for scriptures/prayer/fast guide!)</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="fastingForm">
+	<div style="text-align: center;"> <iframe width="640px" height="480px" src="https://forms.office.com/r/a7U57GehYm?embed=true" style="border: none; max-width:100%; max-height:100vh; align-items: center;"> </iframe> </div>
+</section>
+<section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 10px;">
+	<h3 style="flex: 100%; font-size: 3rem; text-align: center;">Click the links below to "subscribe" to our calendar!</h3>
+	<p style="flex: 100%; text-align: center;"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
+</section>
+<section>
+	<h2 style="text-align: center; line-height: 1.2;"><span style="text-decoration: underline; font-size: 3rem;">UPCOMING EVENTS</span></h2>
+	<p></p>
+	<div id="events" style="display: flex; flex-wrap: wrap; text-align: center; justify-content: space-between; gap: 20px;">
+		<article style="flex: 50%;">
+			<h2 style="font-size: 3rem">1st Sundays</h2> <img src="/files/OCHF/1A_2021_BREACHED/Breacehed_ICS_New.png" width="478" height="269">
+		</article>
+		<article style="flex: 50%;">
+			<h2 style="font-size: 3rem"> 2nd Fridays </h2> <img src="/files/OCHF/Edited/MicrosoftTeams_3de617cdca125195d1b645eea0d2fe2573f66da6bd086695eb15296bd8d77393.png" width="500" height="269">
+		</article>
+		<article style="flex: 50%;">
+			<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+				<h2 style="text-align: center; flex: 100%; font-size: 3rem"> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/AizNasfg7BsK1oqg?ref=Link" target="_blank" rel="noopener noreferrer" aria-label=" (opens in new window)"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span></a>
+				<h3 style="font-size: 2rem; text-align: center; flex: 100%;"><a href="https://sway.cloud.microsoft/IeYyNACO7Va4bDbk?ref=Link&amp;loc=mysways">Click Here for the daily guide.</a></h3>
+			</div>
+		</article>
+	</div>
+</section>
+<section class="themes">
+	<h2 style="flex: 1; font-size: 3rem; text-align: center;">Our church themes are revealed each month!</h2>
+	<div style="flex: 1"> <img src="/files/OCHF/1A_2021_BREACHED/BYAM_JULY_2024_THEME.jpg" width="924" height="354" style="margin: auto;"> </div>
+</section>
+<rwt:content-module class="">
+	<h6 style="text-align: center;"></h6>
+	<h6></h6>
+</rwt:content-module>
+<rwt:include template="Footer"></rwt:include>
