@@ -9,60 +9,67 @@
 </header>
 <rwt:include template="Header"></rwt:include>
 <style>
+	#body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	
 	.bold {
 		font-weight: bold;
 	}
 	
-	.welcome {
+	#welcome {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
 	}
 	
-	.welcomeTitle {
+	#welcome-title {
 		flex: 1;
 		text-align: center;
+		font-weight: bold;
+		font-family: Helvetica;
+		font-size: 5rem;
 		margin-top: 50px;
 	}
 	
-	.welcomeMedia {
+	#welcome-media {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
-		gap: 10px;
 		justify-content: center;
-		margin-top: 50px;
-		margin-bottom: -300px;
+		gap: 20px;
+		/* Optional: Adds space between the elements */
 	}
 	
-	.welcomeMediaElement {
-		position: relative;
-		width: 100%;
-		padding-top: 56.25%;
-		max-width: 300px;
+	.welcome-media-element {
+		flex: 1 1 45%;
+		/* Ensures elements take up roughly equal space, with some margin for wrapping */
+		max-width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
 	}
 	
-	.welcomeMediaElement iframe,
-	.welcomeMediaElement img {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.welcome-media-element iframe,
+	.welcome-media-element img {
 		width: 100%;
-		height: 50%;
-		border: 0;
-		padding: 10px;
+		height: auto;
+		aspect-ratio: 16/9;
 		object-fit: cover;
+		/* Ensures the content fits within the container */
 	}
 	
-	@media (min-width: 768px) {
-		.welcomeMedia {
-			flex-direction: row;
-		}
-		
-		.welcomeMediaElement {
-			width: 49%;
-			max-width: none;
-		}
+	.welcome-media-element p {
+		text-align: center;
+		font-size: 2rem;
+		font-family: Helvetica;
+		font-weight: bold;
+		margin: 10px;
 	}
 	
 	.mission {
@@ -82,12 +89,35 @@
 		text-align: center;
 	}
 	
+	#mission-body {
+		flex: 40%;
+		display: inline;
+	}
+	
+	#mission-body p {
+		font-size: 20px;
+	}
+	
 	.sub-heading {
 		font-size: 25px;
 		font-weight: bold;
 	}
 	
+	#get-started {
+		flex: 40%;
+		display: inline;
+	}
+	
+	#get-started-list {
+		flex: 100%;
+		color: dark blue;
+		font-size: 20px;
+	}
+	
 	.announcements {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
 		background-color: #424242;
 		color: white;
 		padding: 15px;
@@ -95,9 +125,9 @@
 	}
 	
 	.ann-header {
+		text-align: center;
 		font-size: 25px;
 		font-weight: bold;
-		margin-left: 500px;
 	}
 	
 	.ann-container {
@@ -140,128 +170,237 @@
 		overflow: hidden;
 	}
 	
+	#calendar {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+	}
+	
+	#cal-sub {
+		flex: 100%;
+		font-size: 3rem;
+		text-align: center;
+	}
+	
+	#cal-link {
+		flex: 100%;
+		text-align: center;
+	}
+	
+	#events-title {
+		text-align: center;
+		line-height: 1.2;
+		text-decoration: underline;
+		font-size: 3rem;
+	}
+	
+	#events-group {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+	
+	.event {
+		flex: 50%;
+	}
+	
+	.event h2 {
+		font-size: 3rem
+	}
+	
+	.event-cont {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	
+	.event-cont h2 {
+		flex: 100%;
+		text-align: center;
+		font-size: 3rem
+	}
+	
+	.event-cont h3 {
+		flex: 100%;
+		font-size: 2rem;
+		text-align: center;
+	}
+	
 	.themes {
 		display: flex;
 		flex-direction: column;
 		margin: 10px;
 		align-items: center;
 	}
+	
+	.themes h2 {
+		flex: 1;
+		font-size: 3rem;
+		text-align: center;
+	}
+	
+	.themes div {
+		flex: 1
+	}
+	
+	@media (max-width: 480px) {
+		#welcome-media {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			/* Optional: Adds space between the elements */
+		}
+		
+		.welcome-media-element {
+			flex: 1;
+			/* Ensures elements take up roughly equal space, with some margin for wrapping */
+			max-width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 10px;
+		}
+		
+		.welcome-media-element iframe {
+			width: 440px;
+			height: auto;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+		}
+		
+		.welcome-media-element img {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+		}
+	}
 </style>
-<section class="welcome">
-	<h2 class="welcomeTitle">We are so glad you stopped by!</h2>
-	<div class="welcomeMedia">
-		<div class="welcomeMediaElement"> <iframe src="https://www.youtube.com/embed/s04A-TYibok?si=epEHTZTFpWusChio?"></iframe> </div>
-		<div class="welcomeMediaElement"> <img src="/files/OCHF/1A_2021_BREACHED/Breached.jpg" role="presentation" alt=""> </div>
-	</div>
-</section>
-<section class="mission">
-	<h2 class="mission-title">The Breached Young Adult Mission</h2>
-	<div style="flex: 40%; display: inline;">
-		<h4 class="sub-heading">Our Vision</h4>
-		<p style="font-size: 20px;">To connect with young adults, build them in spirit-empowered living, and equip them to build up others in the same way.</p>
-		<h4 class="sub-heading">Our Purpose</h4>
-		<p style="font-size: 20px;">For every member to grow in their God-given abilities in order to show their communities who Jesus is.&nbsp;</p> <br>
-		<h4 class="sub-heading">Let's Connect</h4>
-		<form action="/submit_form" method="post" style="display: flex; flex-direction: column; gap: 10px;"> <label for="name">Name:</label> <input type="text" id="name" name="name" style="height: 40px;"> <label for="email">Email:</label> <input type="email" id="email" name="email" style="height: 40px;"> <label for="sms">Phone Number:</label> <input type="tel" id="sms" name="sms" style="height: 40px;"> <label for="text">Tell us something!</label> <input type="text" id="shortAnswer" style="60px;" placeholder="prayer request, testimony, topic, event suggestion"> <input type="submit" value="Submit" style="width: 200px; margin: auto;"> </form>
-	</div>
-	<div style="flex: 40%;">
-		<h4 class="sub-heading">Get Started</h4>
-		<ul style="flex: 100%; color: dark blue; font-size: 20px;">
-			<li>
-				<h6>Beginners guide to spiritual fasting | <a href="https://pastorvlad.org/resources/fastingpdf/" style="color: white;">Web&nbsp;</a></h6>
+<section id="body">
+	<section id="welcome">
+		<h2 id="welcome-title">We are so glad you stopped by!</h2>
+		<div id="welcome-media">
+			<div class="welcome-media-element"> <iframe src="https://www.youtube.com/embed/s04A-TYibok?si=epEHTZTFpWusChio?"></iframe>
+				<p>Check out our YouTube Channel</p>
+			</div>
+			<div class="welcome-media-element"> <img src="/files/OCHF/1A_2021_BREACHED/Breached.jpg" role="presentation" alt="">
+				<p>Meet our staff!</p>
+			</div>
+		</div>
+	</section>
+	<section class="mission">
+		<h2 class="mission-title">The Breached Young Adult Mission</h2>
+		<div id="mission-body">
+			<h4 class="sub-heading">Our Vision</h4>
+			<p>To connect with young adults, build them in spirit-empowered living, and equip them to build up others in the same way.</p>
+			<h4 class="sub-heading">Our Purpose</h4>
+			<p>For every member to grow in their God-given abilities in order to show their communities who Jesus is.&nbsp;</p> <br>
+			<h4 class="sub-heading">Let's Connect</h4>
+			<form action="/submit_form" method="post" style="display: flex; flex-direction: column; gap: 10px;"> <label for="name">Name:</label> <input type="text" id="name" name="name" style="height: 40px;"> <label for="email">Email:</label> <input type="email" id="email" name="email" style="height: 40px;"> <label for="sms">Phone Number:</label> <input type="tel" id="sms" name="sms" style="height: 40px;"> <label for="text">Tell us something!</label> <input type="text" id="shortAnswer" placeholder="prayer request, testimony, topic, event suggestion"> <input type="submit" value="Submit" style="width: 200px; margin: auto;"> </form>
+		</div>
+		<div id="get-started">
+			<h4 class="sub-heading">Get Started</h4>
+			<ul id="get-started-list">
+				<li>
+					<h6>Beginners guide to spiritual fasting | <a href="https://pastorvlad.org/resources/fastingpdf/" style="color: white;">Web&nbsp;</a></h6>
+				</li>
+				<li>
+					<h6>RightNow Media App | <a href="https://app.rightnowmedia.org/login/init" style="color: white;">Web</a></h6>
+				</li>
+				<li>
+					<h6>Bible plans/community/studies | <a href="https://www.bible.com/" style="color: white;">App</a> | <a href="https://www.bible.com/bible/59/JHN.1.ESV" style="color: white;">Web 1 |</a> <a href="https://www.blueletterbible.org/" style="color: white;">Web 2</a></h6>
+				</li>
+				<li>
+					<h6>RealFaith App | <a href="https://realfaith.com/" style="color: white;">Web</a></h6>
+				</li>
+				<li>
+					<h6>Creation/Evolution | <a href="https://creation.com/" style="color: white;">Web</a></h6>
+				</li>
+				<li>
+					<h6>Finances App | <a href="https://www.ramseysolutions.com/" style="color: white;">Web</a> | Podcast | Youtube</h6>
+				</li>
+				<li>
+					<h6>Mental Health Podcast | Youtube | <a href="https://www.ramseysolutions.com/john-delony" style="color: white;">Web</a></h6>
+				</li>
+				<li>
+					<h6>Career and Life | <a href="https://www.ramseysolutions.com/ken-coleman" style="color: white;">Web</a> | Podcast | Youtube</h6>
+				</li>
+				<li>
+					<h6>Spiritual Growth <a href="https://pastorvlad.org/resources/" style="color: white;">Web</a>&nbsp;</h6>
+				</li>
+				<li>
+					<h6>Spiritual Warfare <a href="https://johnramirez.org/" style="color: white;">Web</a> | <a href="https://johnramirez.org/media/" style="color: white;">Video</a> | Youtube</h6>
+				</li>
+				<li>
+					<h6>Evangelism <a href="https://livingwaters.com/" style="color: white;">Web</a> | Youtube</h6>
+				</li>
+				<li>
+					<h6>Lifestyle Christianity | <a href="https://lifestylechristianity.com/" style="color: white;">Web</a> | Youtube</h6>
+				</li>
+			</ul>
+			<h6 style="flex: 100%; color: white;"><a href="BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
+		</div>
+	</section>
+	<section class="announcements">
+		<h2 class="ann-header">Announcements</h2>
+		<ul class="ann-container">
+			<li class="ann-item">
+				<h4 class="ann-item__heading">YUM Fest! at OCGF.</h4> <time class="ann-item__text">August 4th</time>
+				<p class="ann-item__text">Right after church. Cash Only.</p>
 			</li>
-			<li>
-				<h6>RightNow Media App | <a href="https://app.rightnowmedia.org/login/init" style="color: white;">Web</a></h6>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Food &amp; Fellowship at a Restaurant.</h4> <time class="ann-item__text">August 9th</time> <a href="https://forms.office.com/r/fXC0XZvx2h?" class="ann-item__text">Vote for the location here!</a>
 			</li>
-			<li>
-				<h6>Bible plans/community/studies | <a href="https://www.bible.com/" style="color: white;">App</a> | <a href="https://www.bible.com/bible/59/JHN.1.ESV" style="color: white;">Web 1 |</a> <a href="https://www.blueletterbible.org/" style="color: white;">Web 2</a></h6>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">July 2024! Fasting for the month of August</h4>
+				<p class="ann-item__text">EACH MONTH, we pray and fast for the UPCOMING month. The young adults of Celebration Orange County Gospel Fellowship FAST REGULARLY</p> <a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link" class="ann-item__text">Click HERE for scriptures/prayer/fast guide!</a>
 			</li>
-			<li>
-				<h6>RealFaith App | <a href="https://realfaith.com/" style="color: white;">Web</a></h6>
-			</li>
-			<li>
-				<h6>Creation/Evolution | <a href="https://creation.com/" style="color: white;">Web</a></h6>
-			</li>
-			<li>
-				<h6>Finances App | <a href="https://www.ramseysolutions.com/" style="color: white;">Web</a> | Podcast | Youtube</h6>
-			</li>
-			<li>
-				<h6>Mental Health Podcast | Youtube | <a href="https://www.ramseysolutions.com/john-delony" style="color: white;">Web</a></h6>
-			</li>
-			<li>
-				<h6>Career and Life | <a href="https://www.ramseysolutions.com/ken-coleman" style="color: white;">Web</a> | Podcast | Youtube</h6>
-			</li>
-			<li>
-				<h6>Spiritual Growth <a href="https://pastorvlad.org/resources/" style="color: white;">Web</a>&nbsp;</h6>
-			</li>
-			<li>
-				<h6>Spiritual Warfare <a href="https://johnramirez.org/" style="color: white;">Web</a> | <a href="https://johnramirez.org/media/" style="color: white;">Video</a> | Youtube</h6>
-			</li>
-			<li>
-				<h6>Evangelism <a href="https://livingwaters.com/" style="color: white;">Web</a> | Youtube</h6>
-			</li>
-			<li>
-				<h6>Lifestyle Christianity | <a href="https://lifestylechristianity.com/" style="color: white;">Web</a> | Youtube</h6>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Beach Day at Ocean Grove</h4> <time class="ann-item__text">August 24th. Carpool at OCGF at 6 am.</time>
+				<p id="byo"><span class="bold">BYO Food!</span></p>
+				<p><a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link" class="ann-item__text">Click here to buy a beach pass. You'll need it!</a></p>
+				<p><a href=" https://forms.office.com/r/5TQ6ubFmJT">Click here to fill out the form</a></p>
+				<p><a href="https://ocgf-my.sharepoint.com/:w:/g/personal/mcassase_orangecountyfellowship_org/EZFGc2i5tR5Klttdv6_P5VEBM-qOLFtJv8r8eIV1SGzSBQ?e=vv3FCp">Click here for <span class="bold">What To Bring!</span></a></p>
 			</li>
 		</ul>
-		<h6 style="flex: 100%; color: white;"><a href="BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
-	</div>
+	</section>
+	<section class="fasting-form">
+		<div> <iframe width="760px" height="500px" src="https://sway.office.com/s/Hv1tXN202SGXRGkk/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen="" mozallowfullscreen="" msallowfullscreen="" webkitallowfullscreen=""></iframe> </div>
+	</section>
+	<section id="calendar">
+		<h3 id="cal-sub">Click the links below to "subscribe" to our calendar!</h3>
+		<p id="cal-link"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
+	</section>
+	<section id="events">
+		<h2 id="events-title">UPCOMING EVENTS</h2>
+		<p></p>
+		<div id="events-group">
+			<article class="event">
+				<h2>1st Sundays</h2> <img src="/files/OCHF/1A_2021_BREACHED/Breacehed_ICS_New.png" width="478" height="269">
+			</article>
+			<article class="event">
+				<h2> 2nd Fridays </h2> <img src="/files/OCHF/Edited/MicrosoftTeams_3de617cdca125195d1b645eea0d2fe2573f66da6bd086695eb15296bd8d77393.png" width="500" height="269">
+			</article>
+			<article class="event">
+				<div class="event-cont">
+					<h2> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/AizNasfg7BsK1oqg?ref=Link" target="_blank" rel="noopener noreferrer" aria-label=" (opens in new window)"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span></a>
+					<h3><a href="https://sway.cloud.microsoft/IeYyNACO7Va4bDbk?ref=Link&amp;loc=mysways">Click Here for the daily guide.</a></h3>
+				</div>
+			</article>
+		</div>
+	</section>
+	<section class="themes">
+		<h2>Our church themes are revealed each month!</h2>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/August_2024_Themes.png" width="924" height="354" style="margin: auto;"> </div>
+	</section>
 </section>
-<section class="announcements">
-	<h2 class="ann-header">Announcements</h2>
-	<ul class="ann-container">
-		<li class="ann-item">
-			<h4 class="ann-item__heading">YUM Fest! at OCGF.</h4> <time class="ann-item__text">August 4th</time>
-			<p class="ann-item__text">Right after church. Cash Only.</p>
-		</li>
-		<li class="ann-item">
-			<h4 class="ann-item__heading">Food &amp; Fellowship at a Restaurant.</h4> <time class="ann-item__text">August 9th</time> <a href="https://forms.office.com/r/fXC0XZvx2h?" class="ann-item__text">Vote for the location here!</a>
-		</li>
-		<li class="ann-item">
-			<h4 class="ann-item__heading">July 2024! Fasting for the month of August</h4>
-			<p class="ann-item__text">EACH MONTH, we pray and fast for the UPCOMING month. The young adults of Celebration Orange County Gospel Fellowship FAST REGULARLY</p> <a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link" class="ann-item__text">Click HERE for scriptures/prayer/fast guide!</a>
-		</li>
-		<li class="ann-item">
-			<h4 class="ann-item__heading">Beach Day at Ocean Grove</h4> <time class="ann-item__text">August 24th. Carpool at OCGF at 6 am.</time>
-			<p id="byo"><span class="bold">BYO Food!</span></p>
-			<p><a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link" class="ann-item__text">Click here to buy a beach pass. You'll need it!</a></p>
-			<p><a href=" https://forms.office.com/r/5TQ6ubFmJT">Click here to fill out the form</a></p>
-			<p><a href="https://ocgf-my.sharepoint.com/:w:/g/personal/mcassase_orangecountyfellowship_org/EZFGc2i5tR5Klttdv6_P5VEBM-qOLFtJv8r8eIV1SGzSBQ?e=vv3FCp">Click here for <span class="bold">What To Bring!</span></a></p>
-		</li>
-	</ul>
-</section>
-<section class="fasting-form">
-	<div> <iframe width="760px" height="500px" src="https://sway.office.com/s/Hv1tXN202SGXRGkk/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen="" mozallowfullscreen="" msallowfullscreen="" webkitallowfullscreen=""></iframe> </div>
-</section>
-<section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 10px;">
-	<h3 style="flex: 100%; font-size: 3rem; text-align: center;">Click the links below to "subscribe" to our calendar!</h3>
-	<p style="flex: 100%; text-align: center;"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
-</section>
-<section>
-	<h2 style="text-align: center; line-height: 1.2;"><span style="text-decoration: underline; font-size: 3rem;">UPCOMING EVENTS</span></h2>
-	<p></p>
-	<div id="events" style="display: flex; flex-wrap: wrap; text-align: center; justify-content: space-between; gap: 20px;">
-		<article style="flex: 50%;">
-			<h2 style="font-size: 3rem">1st Sundays</h2> <img src="/files/OCHF/1A_2021_BREACHED/Breacehed_ICS_New.png" width="478" height="269">
-		</article>
-		<article style="flex: 50%;">
-			<h2 style="font-size: 3rem"> 2nd Fridays </h2> <img src="/files/OCHF/Edited/MicrosoftTeams_3de617cdca125195d1b645eea0d2fe2573f66da6bd086695eb15296bd8d77393.png" width="500" height="269">
-		</article>
-		<article style="flex: 50%;">
-			<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
-				<h2 style="text-align: center; flex: 100%; font-size: 3rem"> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/AizNasfg7BsK1oqg?ref=Link" target="_blank" rel="noopener noreferrer" aria-label=" (opens in new window)"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span></a>
-				<h3 style="font-size: 2rem; text-align: center; flex: 100%;"><a href="https://sway.cloud.microsoft/IeYyNACO7Va4bDbk?ref=Link&amp;loc=mysways">Click Here for the daily guide.</a></h3>
-			</div>
-		</article>
-	</div>
-</section>
-<section class="themes">
-	<h2 style="flex: 1; font-size: 3rem; text-align: center;">Our church themes are revealed each month!</h2>
-	<div style="flex: 1"> <img src="/files/OCHF/1A_2021_BREACHED/August_2024_Themes.png" width="924" height="354" style="margin: auto;"> </div>
-</section>
-<script type="text/plain"> const form = document.querySelector('.fastingEmbed');form.addEventListener('focus', () => {document.body.classList.add('fastingEmbed');});form.addEventListener('blur', () => {document.body.classList.remove('fastingEmbed');});</script>
 <rwt:content-module class="">
 	<h6 style="text-align: center;"></h6>
 	<h6></h6>
 </rwt:content-module>
-<rwt:include template="Footer"></rwt:include>
