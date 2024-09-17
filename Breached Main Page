@@ -351,27 +351,13 @@
 		<h2 class="ann-header">Announcements</h2>
 		<ul class="ann-container">
 			<li class="ann-item">
-				<h4 class="ann-item__heading">YUM Fest! at OCGF.</h4> <time class="ann-item__text">August 4th</time>
-				<p class="ann-item__text">Right after church. Cash Only.</p>
-			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">Food &amp; Fellowship at a Restaurant.</h4> <time class="ann-item__text">August 9th</time> <a href="https://forms.office.com/r/fXC0XZvx2h?" class="ann-item__text">Vote for the location here!</a>
-			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">July 2024! Fasting for the month of August</h4>
-				<p class="ann-item__text">EACH MONTH, we pray and fast for the UPCOMING month. The young adults of Celebration Orange County Gospel Fellowship FAST REGULARLY</p> <a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link" class="ann-item__text">Click HERE for scriptures/prayer/fast guide!</a>
-			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">Beach Day at Ocean Grove</h4> <time class="ann-item__text">August 24th. Carpool at OCGF at 6 am.</time>
-				<p id="byo"><span class="bold">BYO Food!</span></p>
-				<p><a href="https://sway.cloud.microsoft/P2yAYcNUJBtkbbQW?ref=Link" class="ann-item__text">Click here to buy a beach pass. You'll need it!</a></p>
-				<p><a href=" https://forms.office.com/r/5TQ6ubFmJT">Click here to fill out the form</a></p>
-				<p><a href="https://ocgf-my.sharepoint.com/:w:/g/personal/mcassase_orangecountyfellowship_org/EZFGc2i5tR5Klttdv6_P5VEBM-qOLFtJv8r8eIV1SGzSBQ?e=vv3FCp">Click here for <span class="bold">What To Bring!</span></a></p>
+				<h4 class="ann-item__heading">September 2024! We are fasting for the month of October</h4>
+				<p class="ann-item__text">EACH MONTH, we pray and fast for the UPCOMING month. The young adults of Celebration Orange County Gospel Fellowship FAST REGULARLY</p> <a href="https://sway.cloud.microsoft/44zh9xkD49d0wpPi?ref=Link&loc=play" class="ann-item__text">Click HERE for scriptures/prayer/fast guide!</a>
 			</li>
 		</ul>
 	</section>
 	<section class="fasting-form">
-		<div> <iframe width="760px" height="500px" src="https://sway.office.com/s/Hv1tXN202SGXRGkk/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen="" mozallowfullscreen="" msallowfullscreen="" webkitallowfullscreen=""></iframe> </div>
+		<div> <iframe width="760px" height="500px" src="https://sway.office.com/s/44zh9xkD49d0wpPi/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen="" mozallowfullscreen="" msallowfullscreen="" webkitallowfullscreen=""></iframe> </div>
 	</section>
 	<section id="calendar">
 		<h3 id="cal-sub">Click the links below to "subscribe" to our calendar!</h3>
@@ -389,8 +375,8 @@
 			</article>
 			<article class="event">
 				<div class="event-cont">
-					<h2> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/AizNasfg7BsK1oqg?ref=Link" target="_blank" rel="noopener noreferrer" aria-label=" (opens in new window)"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span></a>
-					<h3><a href="https://sway.cloud.microsoft/IeYyNACO7Va4bDbk?ref=Link&amp;loc=mysways">Click Here for the daily guide.</a></h3>
+					<h2> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/44zh9xkD49d0wpPi?ref=Link&loc=play" target="_blank" rel="noopener noreferrer" aria-label=" (opens in new window)"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span></a>
+					<h3><a href="https://sway.cloud.microsoft/44zh9xkD49d0wpPi?ref=Link&loc=play">Click Here for the daily guide.</a></h3>
 				</div>
 			</article>
 		</div>
