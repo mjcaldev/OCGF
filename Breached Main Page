@@ -1,10 +1,10 @@
 <rwt:include template="Social"></rwt:include>
 <header class="main-banner">
 	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/Breacehed_ICS_New.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/CoffeeHouse_Sunday.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://docs.google.com/document/d/14gELIzUgKbz7AYbC2yePcAklyA6a65UJm1_crW7hL9c/edit?usp=sharing',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/Breached_Survival_Campout_1.jpg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/2021_LOGOS/breached_logo_wht_final.png'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
-		<div class="slide" data-mightyslider="viewport:'fill',scrollParallax:true,title:'Breached Beach Day',link:{url:' https://forms.office.com/r/5TQ6ubFmJT',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/Breached_Beach_Day.jpeg'"></div>
 	</rwt:slider-widget>
 </header>
 <rwt:include template="Header"></rwt:include>
@@ -15,10 +15,17 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
 	}
 	
 	.bold {
 		font-weight: bold;
+	}
+	
+	.underline {
+		text-decoration: underline;
 	}
 	
 	#welcome {
@@ -121,7 +128,8 @@
 		background-color: #424242;
 		color: white;
 		padding: 15px;
-		margin: 0 10px 10px 10px;
+		margin: 10px;
+		line-height: 1.7;
 	}
 	
 	.ann-header {
@@ -153,6 +161,10 @@
 	.ann-item__text {
 		font-size: 2rem;
 		display: block;
+	}
+	
+	#mario-email {
+		font-size: 1.5rem;
 	}
 	
 	#byo {
@@ -253,6 +265,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			width: 100%;
 			gap: 20px;
 			/* Optional: Adds space between the elements */
 		}
@@ -279,6 +292,26 @@
 			height: auto;
 			aspect-ratio: 16/9;
 			object-fit: cover;
+		}
+		
+		.announcements {
+			width: 96%;
+		}
+		
+		.ann-container {
+			width: 100%;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+		
+		.ann-item {
+			width: 100%;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		
+		#events {
+			margin: 10px;
 		}
 	}
 </style>
@@ -344,20 +377,30 @@
 					<h6>Lifestyle Christianity | <a href="https://lifestylechristianity.com/" style="color: white;">Web</a> | Youtube</h6>
 				</li>
 			</ul>
-			<h6 style="flex: 100%; color: white;"><a href="BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
+			<h6 style="flex: 100%; color: white;"><a href="http://BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
 		</div>
 	</section>
 	<section class="announcements">
 		<h2 class="ann-header">Announcements</h2>
 		<ul class="ann-container">
 			<li class="ann-item">
-				<h4 class="ann-item__heading">September 2024! We are fasting for the month of October</h4>
-				<p class="ann-item__text">EACH MONTH, we pray and fast for the UPCOMING month. The young adults of Celebration Orange County Gospel Fellowship FAST REGULARLY</p> <a href="https://sway.cloud.microsoft/44zh9xkD49d0wpPi?ref=Link&loc=play" class="ann-item__text">Click HERE for scriptures/prayer/fast guide!</a>
+				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
+				<p>October 15-17, 2024. We will be fasting for God to use us in the month of November.</p>
+				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/MvsfARTwP0RlcK8Y?ref=Link&amp;loc=mysways"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
+			</li>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Breached Guys Campout</h4>
+				<p class="ann-item__text">October 25, 2024. 5 PM. Address will be announced in upcoming messages</p>
+				<p>Join the Young Adult Men on an overnight campout on the natural, wooded Cassase property in Middletown. <br><br> Enjoy rugged fun including fieldcraft/survival skills and laser tag but also peaceful and serene times on the natural trail or the many quiet places alone with the Lord. <br><br> Come invigorate the heart, mind, body and spirit together as men. Camping equipment must be supplied by you. <br><br> Registration required ahead of time - bring your own food or include money with registration to have camping food supplied for you.</p>
+				<p class="ann-item__text"><a href="https://docs.google.com/document/d/14gELIzUgKbz7AYbC2yePcAklyA6a65UJm1_crW7hL9c/edit?usp=sharing" target="_blank" aria-label="CLICK HERE (opens in new window)" rel="noreferrer noopener"><span class="underline">CLICK HERE</span></a> for what to bring!</p>
+				<p class="ann-item__text">If you need help with camping supplies/equipment, send a concise, bulleted question in an email to Mario <span id="mario-email">(mcassase@orangecountyfellowship.org)</span></p>
+			</li>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Coffee House Sunday is Back!</h4>
+				<p class="ann-item__text">When? <br> Sundays, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
+				<p class="ann-item__text">Want to go to a coffeehouse or stay in the cafe? <a href="#" role="button"><span class="underline">CLICK HERE</span></a> to vote!</p>
 			</li>
 		</ul>
-	</section>
-	<section class="fasting-form">
-		<div> <iframe width="760px" height="500px" src="https://sway.office.com/s/44zh9xkD49d0wpPi/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen="" mozallowfullscreen="" msallowfullscreen="" webkitallowfullscreen=""></iframe> </div>
 	</section>
 	<section id="calendar">
 		<h3 id="cal-sub">Click the links below to "subscribe" to our calendar!</h3>
@@ -368,22 +411,23 @@
 		<p></p>
 		<div id="events-group">
 			<article class="event">
-				<h2>1st Sundays</h2> <img src="/files/OCHF/1A_2021_BREACHED/Breacehed_ICS_New.png" width="478" height="269">
+				<h2>1st Sundays</h2> <img src="/files/OCHF/1A_2021_BREACHED/CoffeeHouse_Sunday.png" width="478" height="269">
 			</article>
 			<article class="event">
 				<h2> 2nd Fridays </h2> <img src="/files/OCHF/Edited/MicrosoftTeams_3de617cdca125195d1b645eea0d2fe2573f66da6bd086695eb15296bd8d77393.png" width="500" height="269">
 			</article>
 			<article class="event">
 				<div class="event-cont">
-					<h2> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/44zh9xkD49d0wpPi?ref=Link&loc=play" target="_blank" rel="noopener noreferrer" aria-label=" (opens in new window)"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span></a>
-					<h3><a href="https://sway.cloud.microsoft/44zh9xkD49d0wpPi?ref=Link&loc=play">Click Here for the daily guide.</a></h3>
+					<h2> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/MvsfARTwP0RlcK8Y?ref=Link&amp;loc=mysways" target="_blank" aria-label="Click Here for the daily guide. (opens in new window)" rel="noreferrer noopener"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span>
+						<h3>Click Here for the daily guide.</h3>
+					</a>
 				</div>
 			</article>
 		</div>
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
-		<div> <img src="/files/OCHF/1A_2021_BREACHED/August_2024_Themes.png" width="924" height="354" style="margin: auto;"> </div>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/BYAM_Theme_October-2024.png" width="924" height="354" style="margin: auto;"> </div>
 	</section>
 </section>
 <rwt:content-module class="">
