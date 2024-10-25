@@ -175,13 +175,6 @@
 		text-align: center;
 	}
 	
-	.fastingEmbed {
-		border: none;
-		max-width: 100%;
-		max-height: 100vh;
-		overflow: hidden;
-	}
-	
 	#calendar {
 		display: flex;
 		flex-wrap: wrap;
@@ -201,45 +194,11 @@
 		text-align: center;
 	}
 	
-	#events-title {
+	#events {
+		width: 60%;
+		height: auto;
 		text-align: center;
-		line-height: 1.2;
-		text-decoration: underline;
-		font-size: 3rem;
-	}
-	
-	#events-group {
-		display: flex;
-		flex-wrap: wrap;
-		text-align: center;
-		justify-content: space-between;
-		gap: 20px;
-	}
-	
-	.event {
-		flex: 50%;
-	}
-	
-	.event h2 {
-		font-size: 3rem
-	}
-	
-	.event-cont {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-	}
-	
-	.event-cont h2 {
-		flex: 100%;
-		text-align: center;
-		font-size: 3rem
-	}
-	
-	.event-cont h3 {
-		flex: 100%;
-		font-size: 2rem;
-		text-align: center;
+		margin: 20px;
 	}
 	
 	.themes {
@@ -407,23 +366,7 @@
 		<p id="cal-link"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
 	</section>
 	<section id="events">
-		<h2 id="events-title">UPCOMING EVENTS</h2>
-		<p></p>
-		<div id="events-group">
-			<article class="event">
-				<h2>1st Sundays</h2> <img src="/files/OCHF/1A_2021_BREACHED/CoffeeHouse_Sunday.png" width="478" height="269">
-			</article>
-			<article class="event">
-				<h2> 2nd Fridays </h2> <img src="/files/OCHF/Edited/MicrosoftTeams_3de617cdca125195d1b645eea0d2fe2573f66da6bd086695eb15296bd8d77393.png" width="500" height="269">
-			</article>
-			<article class="event">
-				<div class="event-cont">
-					<h2> 3rd Tuesday-Thursday </h2> <a href="https://sway.cloud.microsoft/MvsfARTwP0RlcK8Y?ref=Link&amp;loc=mysways" target="_blank" aria-label="Click Here for the daily guide. (opens in new window)" rel="noreferrer noopener"><span style="flex: 1;"><img src="/files/OCHF/Edited/Beginners_89437b69cddd9ebffd529dd4a8958b765f9f98b4c137684476660a89efc080ff.jpg" width="477" height="278"></span>
-						<h3>Click Here for the daily guide.</h3>
-					</a>
-				</div>
-			</article>
-		</div>
+		<div> <img src="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM-Schedule-Flyer.jpg"> </div>
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
