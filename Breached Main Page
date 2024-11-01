@@ -2,7 +2,7 @@
 <header class="main-banner">
 	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/CoffeeHouse_Sunday.png'"></div>
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://docs.google.com/document/d/14gELIzUgKbz7AYbC2yePcAklyA6a65UJm1_crW7hL9c/edit?usp=sharing',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/Breached_Survival_Campout_1.jpg'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://docs.google.com/document/d/14gELIzUgKbz7AYbC2yePcAklyA6a65UJm1_crW7hL9c/edit?usp=sharing',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/BYAM-Ladies-Night.jpg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/2021_LOGOS/breached_logo_wht_final.png'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
 	</rwt:slider-widget>
@@ -344,16 +344,14 @@
 		<ul class="ann-container">
 			<li class="ann-item">
 				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
-				<p>October 15-17, 2024. We will be fasting for God to use us in the month of November.</p>
-				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/MvsfARTwP0RlcK8Y?ref=Link&amp;loc=mysways"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
+				<p>November 19-21, 2024. We will be fasting for God to use us in the month of December.</p>
+				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/TOrt2iJUJaBg8cOa?ref=Link"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
 			</li>
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Breached Guys Campout</h4>
-				<p class="ann-item__text">October 25, 2024. 5 PM. Address will be announced in upcoming messages</p>
-				<p><a href="https://celebration.churchofficechms.com/external/form/af919639-6b0b-4868-8c15-2fb77cfeaf6c"><span class="underline">REGISTER HERE</span></a></p>
-				<p>Join the Young Adult Men on an overnight campout on the natural, wooded Cassase property in Middletown. <br><br> Enjoy rugged fun including fieldcraft/survival skills and laser tag but also peaceful and serene times on the natural trail or the many quiet places alone with the Lord. <br><br> Come invigorate the heart, mind, body and spirit together as men. Camping equipment must be supplied by you. <br><br> Registration required ahead of time - bring your own food or include money with registration to have camping food supplied for you.</p>
-				<p class="ann-item__text"><a href="https://docs.google.com/document/d/14gELIzUgKbz7AYbC2yePcAklyA6a65UJm1_crW7hL9c/edit?usp=sharing" target="_blank" aria-label="CLICK HERE (opens in new window)" rel="noreferrer noopener"><span class="underline">CLICK HERE</span></a> for what to bring!</p>
-				<p class="ann-item__text">If you need help with camping supplies/equipment, send a concise, bulleted question in an email to Mario <span id="mario-email">(mcassase@orangecountyfellowship.org)</span></p>
+				<h4 class="ann-item__heading">Breached Ladies Craft Night</h4>
+				<p class="ann-item__text">Saturday, November 23, 2024. 5-9 PM. See Shari, Shellae, or Amanda for more info!</p>
+				<p class="ann-item__text">A night for Young Adult Women, you’ll laugh, you’ll craft, we’ll see you there.</p>
+				<p class="ann-item__text">Welcoming all ladies from 18-35 years old.</p>
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading">Coffee House Sunday is Back!</h4>
@@ -371,7 +369,7 @@
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
-		<div> <img src="/files/OCHF/1A_2021_BREACHED/BYAM_Theme_October-2024.png" width="924" height="354" style="margin: auto;"> </div>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/November_2024_Themes.png" width="924" height="354" style="margin: auto;"> </div>
 	</section>
 </section>
 <rwt:content-module class="">
