@@ -339,9 +339,16 @@
 			<h6 style="flex: 100%; color: white;"><a href="http://BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
 		</div>
 	</section>
+	<section id="events">
+		<div> <img src="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM-Schedule-Flyer.jpg"> </div>
+	</section>
 	<section class="announcements">
 		<h2 class="ann-header">Announcements</h2>
 		<ul class="ann-container">
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Coffee House Sunday is Back!</h4>
+				<p class="ann-item__text">When? <br> Sundays, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
+			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
 				<p>November 19-21, 2024. We will be fasting for God to use us in the month of December.</p>
@@ -353,19 +360,11 @@
 				<p class="ann-item__text">A night for Young Adult Women, you’ll laugh, you’ll craft, we’ll see you there.</p>
 				<p class="ann-item__text">Welcoming all ladies from 18-35 years old.</p>
 			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">Coffee House Sunday is Back!</h4>
-				<p class="ann-item__text">When? <br> Sundays, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
-				<p class="ann-item__text">Want to go to a coffeehouse or stay in the cafe? <a href="#" role="button"><span class="underline">CLICK HERE</span></a> to vote!</p>
-			</li>
 		</ul>
 	</section>
 	<section id="calendar">
 		<h3 id="cal-sub">Click the links below to "subscribe" to our calendar!</h3>
 		<p id="cal-link"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
-	</section>
-	<section id="events">
-		<div> <img src="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM-Schedule-Flyer.jpg"> </div>
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
