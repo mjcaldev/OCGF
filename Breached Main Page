@@ -270,6 +270,8 @@
 		}
 		
 		#events {
+			width: 95%;
+			height: auto;
 			margin: 10px;
 		}
 	}
