@@ -1,1 +1,1 @@
-# OCGF
+This is a strictly frontend project. Maintaining the website for my church's Young Adult Ministry - Breached! There are many limitations on what I can do with the current provider, but I am looking into methods to modernize this site. 
