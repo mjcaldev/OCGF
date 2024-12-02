@@ -1,9 +1,8 @@
 <rwt:include template="Social"></rwt:include>
 <header class="main-banner">
 	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/CoffeeHouse_Sunday.png'"></div>
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://docs.google.com/document/d/14gELIzUgKbz7AYbC2yePcAklyA6a65UJm1_crW7hL9c/edit?usp=sharing',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/BYAM-Ladies-Night.jpg'"></div>
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/2021_LOGOS/breached_logo_wht_final.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/BYAM-Holiday-Coffee.jpeg'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/1A_2021_BREACHED/breached_logo_clr_final.jpg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
 	</rwt:slider-widget>
 </header>
@@ -105,6 +104,20 @@
 		font-size: 20px;
 	}
 	
+	#lets-connect {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	
+	input {
+		width: 100%;
+		height: 40px;
+		padding: 10px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+	
 	.sub-heading {
 		font-size: 25px;
 		font-weight: bold;
@@ -169,10 +182,6 @@
 	
 	#byo {
 		margin: 10px 10px 10px 0;
-	}
-	
-	.fasting-form {
-		text-align: center;
 	}
 	
 	#calendar {
@@ -276,6 +285,57 @@
 		}
 	}
 </style>
+<script defer>
+	// Form ID and Web App URL
+	const formId = 'google-sheet-form';
+	const responseElementId = 'response';
+	const googleScriptURL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL'; // Replace with your Apps Script Web App URL
+	
+	// Function to handle form submission
+	const handleFormSubmission = async (event) => {
+		event.preventDefault(); // Prevent default form submission
+		
+		// Extract form and form data
+		const formElement = event.target;
+		const formData = new FormData(formElement);
+		
+		// Convert form data to JSON-friendly object
+		const jsonData = Object.fromEntries(formData.entries());
+		
+		try {
+			// Send the form data to the Google Script Web App
+			const response = await fetch(googleScriptURL, {
+				method: 'POST',
+				body: JSON.stringify(jsonData),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			});
+			
+			// Parse the response
+			const result = await response.json();
+			
+			// Update the response message
+			const responseElement = document.getElementById(responseElementId);
+			responseElement.textContent =
+				result.status === 'success' ?
+				'Form submitted successfully!' :
+				'There was an error.';
+		}
+		catch (error) {
+			console.error('Error submitting form:', error);
+			
+			// Update the response message in case of failure
+			const responseElement = document.getElementById(responseElementId);
+			responseElement.textContent = 'Submission failed.';
+		}
+	};
+	
+	// Attach event listener to the form
+	document
+		.getElementById(formId)
+		.addEventListener('submit', handleFormSubmission);
+</script>
 <section id="body">
 	<section id="welcome">
 		<h2 id="welcome-title">We are so glad you stopped by!</h2>
@@ -296,7 +356,7 @@
 			<h4 class="sub-heading">Our Purpose</h4>
 			<p>For every member to grow in their God-given abilities in order to show their communities who Jesus is.&nbsp;</p> <br>
 			<h4 class="sub-heading">Let's Connect</h4>
-			<form action="/submit_form" method="post" style="display: flex; flex-direction: column; gap: 10px;"> <label for="name">Name:</label> <input type="text" id="name" name="name" style="height: 40px;"> <label for="email">Email:</label> <input type="email" id="email" name="email" style="height: 40px;"> <label for="sms">Phone Number:</label> <input type="tel" id="sms" name="sms" style="height: 40px;"> <label for="text">Tell us something!</label> <input type="text" id="shortAnswer" placeholder="prayer request, testimony, topic, event suggestion"> <input type="submit" value="Submit" style="width: 200px; margin: auto;"> </form>
+			<form id="lets-connect" action="/submit_form" method="post"> <label for="name">Name:</label> <input type="text" name="name"> <label for="email">Email:</label> <input type="email" name="email"> <label for="sms">Phone Number:</label> <input type="tel" name="sms"> <label for="text">Send us a message!</label> <input type="text" id="shortAnswer" placeholder="Type your questions, suggestions, or prayer requests here"> <input type="submit" id="submit" value="Submit"> </form>
 		</div>
 		<div id="get-started">
 			<h4 class="sub-heading">Get Started</h4>
@@ -348,19 +408,23 @@
 		<h2 class="ann-header">Announcements</h2>
 		<ul class="ann-container">
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Coffee House Sunday is Back!</h4>
-				<p class="ann-item__text">When? <br> Sundays, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
+				<h4 class="ann-item__heading">Join us for our Christmas Coffehouse Sunday!</h4>
+				<p class="ann-item__text">When? <br> <strong>DATE CHANGED!</strong> to December 29, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
+				<p class="ann-item__text">Please bring a Christmas-themed sweet snack, favorite holiday flavored creamer (regular creamer/half &amp; half provided)</p>
+				<p class="ann-item__text">If you would like to submit a Christmas-themed song to our playlist, please let us know via the "Lets Connect" form above.</p>
+				<p class="ann-item__text">Suggested donation of $5 (cash or digital)</p>
+			</li>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Christmas Food and Fellowship</h4>
+				<p class="ann-item__text">Second Friday of the month. December 13, 2024</p>
+				<p class="ann-item__text">Bring your favorite dish, appetizer, dessert (or $7 contribution) and come enjoy some Christmas fun, food and fellowship in a joyous atmosphere!</p>
+				<p class="ann-item__text">Coffee and soda provided.</p>
+				<p class="ann-item__text">Please dress semi-formal (try to wear something that includes a holiday color(s) - red, white, black, green, silver)</p>
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
-				<p>November 19-21, 2024. We will be fasting for God to use us in the month of December.</p>
-				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/TOrt2iJUJaBg8cOa?ref=Link"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
-			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">Breached Ladies Craft Night</h4>
-				<p class="ann-item__text">Saturday, November 23, 2024. 5-9 PM. See Shari, Shellae, or Amanda for more info!</p>
-				<p class="ann-item__text">A night for Young Adult Women, you’ll laugh, you’ll craft, we’ll see you there.</p>
-				<p class="ann-item__text">Welcoming all ladies from 18-35 years old.</p>
+				<p class="ann-item__text">December 17-19, 2024. We will be fasting for God to use us in the <strong>January 2025.</strong></p>
+				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/tkAeIxMOI3ocMZjn?ref=Link&amp;loc=play"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
 			</li>
 		</ul>
 	</section>
@@ -370,7 +434,7 @@
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
-		<div> <img src="/files/OCHF/1A_2021_BREACHED/November_2024_Themes.png" width="924" height="354" style="margin: auto;"> </div>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/BYAM-Themes-December24.png" width="924" height="354" style="margin: auto;"> </div>
 	</section>
 </section>
 <rwt:content-module class="">
