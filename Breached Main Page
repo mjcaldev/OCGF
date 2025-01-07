@@ -1,13 +1,28 @@
 <rwt:include template="Social"></rwt:include>
 <header class="main-banner">
 	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,link:{url:'https://forms.gle/ALQFb4d48XsJkNaaA',target:'_blank'},cover:'/files/OCHF/1A_2021_BREACHED/BYAM-Holiday-Coffee.jpeg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/1A_2021_BREACHED/breached_logo_clr_final.jpg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
 	</rwt:slider-widget>
 </header>
 <rwt:include template="Header"></rwt:include>
 <style>
+	/* Global Styles*/
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Inactive because RWT has some presets on buttonsbutton {appearance: none;border: none;background: none;cursor: pointer;font-weight: bold;padding: 1rem 1.5rem;border-radius: 0.5rem;background-color: teal;color: white;}*/
+	.bold {
+		font-weight: bold;
+	}
+	
+	.underline {
+		text-decoration: underline;
+	}
+	
 	#body {
 		display: flex;
 		flex-direction: column;
@@ -19,14 +34,7 @@
 		box-sizing: border-box;
 	}
 	
-	.bold {
-		font-weight: bold;
-	}
-	
-	.underline {
-		text-decoration: underline;
-	}
-	
+	/* Welcome Section */
 	#welcome {
 		display: flex;
 		flex-direction: column;
@@ -47,12 +55,10 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 20px;
-		/* Optional: Adds space between the elements */
 	}
 	
 	.welcome-media-element {
 		flex: 1 1 45%;
-		/* Ensures elements take up roughly equal space, with some margin for wrapping */
 		max-width: 50%;
 		display: flex;
 		flex-direction: column;
@@ -78,6 +84,7 @@
 		margin: 10px;
 	}
 	
+	/* Mission Statement */
 	.mission {
 		display: flex;
 		flex-wrap: wrap;
@@ -104,25 +111,42 @@
 		font-size: 20px;
 	}
 	
+	.sub-heading {
+		font-weight: bold;
+	}
+	
+	/* Connect Form */
 	#lets-connect {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
 	}
 	
-	input {
-		width: 100%;
-		height: 40px;
-		padding: 10px;
-		font-size: 16px;
-		box-sizing: border-box;
+	/* Connect Button :( RWT won't allow cool buttons. so sadbutton #connect-btn {font-size: 27px;background-image: linear-gradient(to right, white 50%, teal 50%);background-size: 200%;transition: 0.4s ease out;}#connect-btn:hover {background-position: right;}*/
+	#connect-btn {
+		font-size: 27px;
+		margin: 10px 10px 20px 10px;
+		padding: 20px;
 	}
 	
-	.sub-heading {
-		font-size: 25px;
-		font-weight: bold;
+	#connect-btn a {
+		text-decoration: none;
+		color: white;
 	}
 	
+	/* Suggest Button */
+	#suggest-btn {
+		font-size: 27px;
+		margin: 5px 10px 20px 10px;
+		padding: 20px;
+	}
+	
+	#suggest-btn a {
+		text-decoration: none;
+		color: white;
+	}
+	
+	/* Get Started List */
 	#get-started {
 		flex: 40%;
 		display: inline;
@@ -134,6 +158,7 @@
 		font-size: 20px;
 	}
 	
+	/* Announcements */
 	.announcements {
 		flex: 1;
 		display: flex;
@@ -176,14 +201,7 @@
 		display: block;
 	}
 	
-	#mario-email {
-		font-size: 1.5rem;
-	}
-	
-	#byo {
-		margin: 10px 10px 10px 0;
-	}
-	
+	/* Calendar */
 	#calendar {
 		display: flex;
 		flex-wrap: wrap;
@@ -227,6 +245,7 @@
 		flex: 1
 	}
 	
+	/* Mobile Styles */
 	@media (max-width: 480px) {
 		#welcome-media {
 			display: flex;
@@ -285,57 +304,6 @@
 		}
 	}
 </style>
-<script defer>
-	// Form ID and Web App URL
-	const formId = 'google-sheet-form';
-	const responseElementId = 'response';
-	const googleScriptURL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL'; // Replace with your Apps Script Web App URL
-	
-	// Function to handle form submission
-	const handleFormSubmission = async (event) => {
-		event.preventDefault(); // Prevent default form submission
-		
-		// Extract form and form data
-		const formElement = event.target;
-		const formData = new FormData(formElement);
-		
-		// Convert form data to JSON-friendly object
-		const jsonData = Object.fromEntries(formData.entries());
-		
-		try {
-			// Send the form data to the Google Script Web App
-			const response = await fetch(googleScriptURL, {
-				method: 'POST',
-				body: JSON.stringify(jsonData),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			});
-			
-			// Parse the response
-			const result = await response.json();
-			
-			// Update the response message
-			const responseElement = document.getElementById(responseElementId);
-			responseElement.textContent =
-				result.status === 'success' ?
-				'Form submitted successfully!' :
-				'There was an error.';
-		}
-		catch (error) {
-			console.error('Error submitting form:', error);
-			
-			// Update the response message in case of failure
-			const responseElement = document.getElementById(responseElementId);
-			responseElement.textContent = 'Submission failed.';
-		}
-	};
-	
-	// Attach event listener to the form
-	document
-		.getElementById(formId)
-		.addEventListener('submit', handleFormSubmission);
-</script>
 <section id="body">
 	<section id="welcome">
 		<h2 id="welcome-title">We are so glad you stopped by!</h2>
@@ -354,9 +322,11 @@
 			<h4 class="sub-heading">Our Vision</h4>
 			<p>To connect with young adults, build them in spirit-empowered living, and equip them to build up others in the same way.</p>
 			<h4 class="sub-heading">Our Purpose</h4>
-			<p>For every member to grow in their God-given abilities in order to show their communities who Jesus is.&nbsp;</p> <br>
-			<h4 class="sub-heading">Let's Connect</h4>
-			<form id="lets-connect" action="/submit_form" method="post"> <label for="name">Name:</label> <input type="text" name="name"> <label for="email">Email:</label> <input type="email" name="email"> <label for="sms">Phone Number:</label> <input type="tel" name="sms"> <label for="text">Send us a message!</label> <input type="text" id="shortAnswer" placeholder="Type your questions, suggestions, or prayer requests here"> <input type="submit" id="submit" value="Submit"> </form>
+			<p>For every member to grow in their God-given abilities in order to show their communities who Jesus is.&nbsp;</p>
+			<h4 class="sub-heading" id="lets-connect">Let's Connect</h4>
+			<p> Fill out this quick form to get in touch with the Breached team: </p> <button id="connect-btn"><a href="https://forms.office.com/r/Ti3E400XDM">CONNECT</a></button>
+			<p> Send us your suggestions here: </p> <button id="suggest-btn"><a href="https://forms.office.com/r/Ti3E400XDM">SUGGEST</a></button>
+			<p> We look forward to hearing from you 😁 </p>
 		</div>
 		<div id="get-started">
 			<h4 class="sub-heading">Get Started</h4>
@@ -401,32 +371,28 @@
 			<h6 style="flex: 100%; color: white;"><a href="http://BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
 		</div>
 	</section>
-	<section id="events">
-		<div> <img src="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM-Schedule-Flyer.jpg"> </div>
-	</section>
 	<section class="announcements">
 		<h2 class="ann-header">Announcements</h2>
 		<ul class="ann-container">
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Join us for our Christmas Coffehouse Sunday!</h4>
-				<p class="ann-item__text">When? <br> <strong>DATE CHANGED!</strong> to December 29, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
-				<p class="ann-item__text">Please bring a Christmas-themed sweet snack, favorite holiday flavored creamer (regular creamer/half &amp; half provided)</p>
-				<p class="ann-item__text">If you would like to submit a Christmas-themed song to our playlist, please let us know via the "Lets Connect" form above.</p>
-				<p class="ann-item__text">Suggested donation of $5 (cash or digital)</p>
-			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">Christmas Food and Fellowship</h4>
-				<p class="ann-item__text">Second Friday of the month. December 13, 2024</p>
-				<p class="ann-item__text">Bring your favorite dish, appetizer, dessert (or $7 contribution) and come enjoy some Christmas fun, food and fellowship in a joyous atmosphere!</p>
-				<p class="ann-item__text">Coffee and soda provided.</p>
-				<p class="ann-item__text">Please dress semi-formal (try to wear something that includes a holiday color(s) - red, white, black, green, silver)</p>
+				<h4 class="ann-item__heading">Breached Food and Fellowship Night</h4>
+				<p class="ann-item__text">Second Friday of the month.</p>
+				<p class="ann-item__text">Come enjoy a great night of food, fellowship, worship, and a good word.</p>
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
-				<p class="ann-item__text">December 17-19, 2024. We will be fasting for God to use us in the <strong>January 2025.</strong></p>
-				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/tkAeIxMOI3ocMZjn?ref=Link&amp;loc=play"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
+				<p class="ann-item__text">This month we will replace our usual fast with the church-wide Danile Fast. We will be fasting and praying for <strong>The Year of 2025.</strong></p>
+				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://teams.microsoft.com/l/channel/19%3ANQVbhFYERQD2DIg0jSC6OepNri5SJHIXQywXgrr3zho1%40thread.tacv2/Corporate%20Fasting?groupId=b6f2fcb2-ca26-4966-b20c-6d658e51394a&amp;tenantId=4c5d801b-665a-4a73-941f-57a68bdd2c3a&amp;ngc=true&amp;allowXTenantAccess=true"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
+			</li>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Coffee House Sunday is Back!</h4>
+				<p class="ann-item__text">When? <br> Sundays, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
+				<p class="ann-item__text">Ask our staff for more info for January 2025.</p>
 			</li>
 		</ul>
+	</section>
+	<section id="events">
+		<div> <img src="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM-Schedule-Flyer.jpg"> </div>
 	</section>
 	<section id="calendar">
 		<h3 id="cal-sub">Click the links below to "subscribe" to our calendar!</h3>
@@ -434,7 +400,7 @@
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
-		<div> <img src="/files/OCHF/1A_2021_BREACHED/BYAM-Themes-December24.png" width="924" height="354" style="margin: auto;"> </div>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/BYAM-Themes-January25.jpeg" width="924" height="354" style="margin: auto;"> </div>
 	</section>
 </section>
 <rwt:content-module class="">
