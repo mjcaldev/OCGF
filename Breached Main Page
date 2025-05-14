@@ -336,12 +336,23 @@
 				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/BaO8nGtjYIa0Rdth?ref=Link"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
 			</li>
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Coffee House Sunday</h4>
-				<p class="ann-item__text">When? <br> First Sundays, after church. <br> Where? <br> Downstairs in Cafe Cristo.</p>
+				<h4 class="ann-item__heading">Icecream Sunday</h4>
+				<p class="ann-item__text">When? <br> First Sundays, after church. <br> Where? <br> <a href="#">Vote on the location here.</a></p>
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading">Sunrise Prayer</h4>
 				<p class="ann-item__text">When? <br> Third Saturday mornings @ 6 AM <br> Where? <br> Celebration OCGF</p>
+			</li>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Girls Cafe Day</h4>
+				<p class="ann-item__text">May 25, from 4 pm - 5:30 pm</p>
+				<p class="ann-item__text">DAYES Coffee Roasters, North Street, Middletown, NY</p>
+			</li>
+			<li class="ann-item">
+				<h4 class="ann-item__heading">Guys Overnight Campout</h4>
+				<p class="ann-item__text">May 30, from 6 pm - May 31 9 am</p>
+				<p class="ann-item__text">31 School house Road</p>
+				<p class="ann-item__text">Time to relax and enjoy each other as guys and God's creation. Campfire dinner/worship and breakfast with morning devotion.</p>
 			</li>
 		</ul>
 	</section>
