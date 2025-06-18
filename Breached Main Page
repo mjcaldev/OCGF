@@ -3,6 +3,7 @@
 	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/1A_2021_BREACHED/breached_logo_clr_final.jpg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
+		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/Breached-Raft-2025.jpg'"></div>
 	</rwt:slider-widget>
 </header>
 <rwt:include template="Header"></rwt:include>
@@ -332,8 +333,9 @@
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
-				<p class="ann-item__text">This month we will be fasting and praying for <strong>the month of June.</strong></p>
-				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://sway.cloud.microsoft/BaO8nGtjYIa0Rdth?ref=Link"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
+				<p class="ann-item__text">New to fasting? Learn more about <a href="https://pastorvlad.org/beginnersfast/"><strong>powerful Christian fasting here!</strong></a></p>
+				<p class="ann-item__text">This month of June, we will be fasting and praying for <strong>the month of July.</strong></p>
+				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://breachedfasting.blogspot.com/"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading">Icecream Sunday</h4>
@@ -344,15 +346,9 @@
 				<p class="ann-item__text">When? <br> Third Saturday mornings @ 6 AM <br> Where? <br> Celebration OCGF</p>
 			</li>
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Girls Cafe Day</h4>
-				<p class="ann-item__text">May 25, from 4 pm - 5:30 pm</p>
-				<p class="ann-item__text">DAYES Coffee Roasters, North Street, Middletown, NY</p>
-			</li>
-			<li class="ann-item">
-				<h4 class="ann-item__heading">Guys Overnight Campout</h4>
-				<p class="ann-item__text">May 30, from 6 pm - May 31 9 am</p>
-				<p class="ann-item__text">31 School house Road</p>
-				<p class="ann-item__text">Time to relax and enjoy each other as guys and God's creation. Campfire dinner/worship and breakfast with morning devotion.</p>
+				<h4 class="ann-item__heading">Annual Rafting Trip</h4>
+				<p class="ann-item__text">Join us for our annual churchwide Summer River Trip! BYO picnic lunch, where we dock ashore and enjoy a day together.</p>
+				<p class="ann-item__text"> <strong>When?</strong> <br> Saturday, June 28 @ 7 AM <br> <strong>Where?</strong> <br> Meet at OCGF <br> <strong>How much?</strong> <br> $60 per person. Children 9 and under ride free if there are 3 (paying) adults in a raft. <br> <strong>Sign up <a href="https://celebration.churchofficechms.com/external/form/b7dce8ee-0261-4985-80b6-99fb6f51bd3e">here</a></strong> <br> Also <strong>sign <a href="https://indianheadcanoes.com/wp-content/uploads/2025/04/Acceptance-of-Responsibility-1.pdf">this acknowledgement form</a></strong></p>
 			</li>
 		</ul>
 	</section>
@@ -379,7 +375,7 @@
 			<h4 class="sub-heading">Get Started</h4>
 			<ul id="get-started-list">
 				<li>
-					<h6>Beginners guide to spiritual fasting | <a href="https://pastorvlad.org/resources/fastingpdf/" style="color: white;">Web&nbsp;</a></h6>
+					<h6>Beginners guide to spiritual fasting | <a href="https://pastorvlad.org/beginnersfast/" style="color: white;">Web&nbsp;</a></h6>
 				</li>
 				<li>
 					<h6>RightNow Media App | <a href="https://app.rightnowmedia.org/login/init" style="color: white;">Web</a></h6>
@@ -420,7 +416,7 @@
 	</section>
 	<section class="themes">
 		<h2>Our church themes are revealed each month!</h2>
-		<div> <img src="/files/OCHF/1A_2021_BREACHED/BYAM-Themes-May25.jpeg" width="924" height="354" style="margin: auto;"> </div>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/agape-sat.png" width="924" height="354" style="margin: auto;"> </div>
 	</section>
 </section>
 <rwt:content-module class="">
