@@ -3,7 +3,6 @@
 	<rwt:slider-widget aspectratio="1900:300" speed="300" animatein="fadeIn" timeout="4500" animateout="fadeOut">
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,title:' Untitled',cover:'/files/OCHF/1A_2021_BREACHED/breached_logo_clr_final.jpg'"></div>
 		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/MicrosoftTeams-image_17_.png'"></div>
-		<div class="slide" data-mightyslider="viewport:'fit',scrollParallax:true,cover:'/files/OCHF/1A_2021_BREACHED/Breached-Raft-2025.jpg'"></div>
 	</rwt:slider-widget>
 </header>
 <rwt:include template="Header"></rwt:include>
@@ -209,6 +208,7 @@
 	
 	/* Calendar */
 	#calendar {
+		flex: 1;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -234,7 +234,9 @@
 		margin: 20px;
 	}
 	
+	/* Themes */
 	.themes {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		margin: 10px;
@@ -244,11 +246,28 @@
 	.themes h2 {
 		flex: 1;
 		font-size: 3rem;
+		margin-bottom: 100px;
 		text-align: center;
 	}
 	
 	.themes div {
 		flex: 1
+	}
+	
+	/* Cal & Themes */
+	.cal-theme {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 20px;
+		margin: 20px;
+	}
+	
+	#cal-theme>#calendar,
+	#cal-theme>.themes {
+		flex: 1 1 45%;
+		min-width: 300px;
 	}
 	
 	/* Mobile Styles */
@@ -308,6 +327,16 @@
 			height: auto;
 			margin: 10px;
 		}
+		
+		.cal-theme {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.cal-theme>#calendar,
+		.cal-theme>.themes {
+			flex: 1 1 100%;
+		}
 	}
 </style>
 <section id="body">
@@ -324,37 +353,47 @@
 	</section>
 	<section class="announcements">
 		<h2 class="ann-header">Announcements</h2>
-		<p> Check out our calendar at the bottom of the page or <a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">here at this link</a> for more event information! </p>
+		<p class="ann-item__text"> Breached merch is here. Click the button to get yours! <button id="connect-btn"><a href="https://celebration.churchofficechms.com/external/form/7ca76dbf-1925-4c63-81c8-4df00c6e47f3">BREACED MERCH</a></button> </p>
+		<div> <img src="/files/OCHF/1A_2021_BREACHED/breached-merch.jpeg" width="924" height="354"> </div>
+		<p class=" ann-item__text"=""=""> Check out our calendar. <a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">CLICK HERE</a> for more event information! </p>
+		<p></p>
 		<ul class="ann-container">
 			<li class="ann-item">
+				<h4 class="ann-item__heading">Icecream Sunday</h4>
+				<p class="ann-item__text">First Sundays, after church. <a href="https://docs.google.com/forms/d/1-CHxGG09VMofRqWqBVxCBRLWm3MzWau-5ZQGrMGAsJ0/edit?usp=drivesdk">Vote on the location here.</a></p>
+			</li>
+			<li class="ann-item">
 				<h4 class="ann-item__heading">Food and Fellowship Night</h4>
-				<p class="ann-item__text">Second Friday of each month.</p>
-				<p class="ann-item__text">Come enjoy a great night of food, fellowship, worship, and a good word.</p>
+				<p class="ann-item__text">Cafe Cristo at Celebration OCGF.</p>
+				<p class="ann-item__text">Enjoy a fun night with the Breached crew eating good food and sharing in the Word together!</p>
 			</li>
 			<li class="ann-item">
 				<h4 class="ann-item__heading" id="fast">FAST AND PRAY!</h4>
 				<p class="ann-item__text">New to fasting? Learn more about <a href="https://pastorvlad.org/beginnersfast/"><strong>powerful Christian fasting here!</strong></a></p>
-				<p class="ann-item__text">This month of June, we will be fasting and praying for <strong>the month of July.</strong></p>
+				<p class="ann-item__text">This month of October, we will be fasting and praying for <strong>the month of November.</strong></p>
 				<p class="ann-item__text">Every month, we pray and fast for the upcoming month. <a href="https://breachedfasting.blogspot.com/"><span class="underline">CLICK HERE</span></a> for scriptures/prayer/fast guide!</p>
 			</li>
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Icecream Sunday</h4>
-				<p class="ann-item__text">When? <br> First Sundays, after church. <br> Where? <br> <a href="#">Vote on the location here.</a></p>
-			</li>
-			<li class="ann-item">
 				<h4 class="ann-item__heading">Sunrise Prayer</h4>
-				<p class="ann-item__text">When? <br> Third Saturday mornings @ 6 AM <br> Where? <br> Celebration OCGF</p>
+				<p class="ann-item__text">Here at Celebration OCGF. Third Saturday mornings @ 6 AM</p>
 			</li>
 			<li class="ann-item">
-				<h4 class="ann-item__heading">Annual Rafting Trip</h4>
-				<p class="ann-item__text">Join us for our annual churchwide Summer River Trip! BYO picnic lunch, where we dock ashore and enjoy a day together.</p>
-				<p class="ann-item__text"> <strong>When?</strong> <br> Saturday, June 28 @ 7 AM <br> <strong>Where?</strong> <br> Meet at OCGF <br> <strong>How much?</strong> <br> $60 per person. Children 9 and under ride free if there are 3 (paying) adults in a raft. <br> <strong>Sign up <a href="https://celebration.churchofficechms.com/external/form/b7dce8ee-0261-4985-80b6-99fb6f51bd3e">here</a></strong> <br> Also <strong>sign <a href="https://indianheadcanoes.com/wp-content/uploads/2025/04/Acceptance-of-Responsibility-1.pdf">this acknowledgement form</a></strong></p>
+				<h4 class="ann-item__heading">Guy's Campout!</h4>
+				<p class="ann-item__text">Mario's Campground (message Mario for the exact location)</p>
+				<p class="ann-item__text">Remember to reference our guide on what to bring <a href="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM_Survial_Night_Supplies_List.pdf">HERE AT THIS LINK</a></p>
 			</li>
 		</ul>
 	</section>
-	<section id="calendar">
-		<h3 id="cal-sub">Click the links below to subscribe to our calendar!</h3>
-		<p id="cal-link"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
+	<section class="cal-theme">
+		<div id="calendar">
+			<h2 id="cal-sub">Click the links below to subscribe to our calendar!</h2>
+			<p class="ann-item__text"> Help inform next year's Breached Calendar! <a href="https://forms.gle/Ye93fsnrBLLmyutk8">CLICK HERE</a> (1 minute).</p>
+			<p id="cal-link"><a href="https://calendar.google.com/calendar/ical/breachedcalendar%40gmail.com/public/basic.ics">ICal Link</a>&nbsp; |&nbsp;<a href="https://calendar.google.com/calendar/embed?src=breachedcalendar%40gmail.com&amp;ctz=America%2FNew_York">Web Calendar Link</a></p> <iframe width="746" height="475" src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YnJlYWNoZWRjYWxlbmRhckBnbWFpbC5jb20&amp;color=%23D50000" frameborder="0" scrolling="no"></iframe>
+		</div>
+		<div class="themes">
+			<h2>Our church themes are revealed each month!</h2>
+			<div> <img src="/files/OCHF/1A_2021_BREACHED/oct-theme.jpeg" width="924" height="354" style="margin: auto;"> </div>
+		</div>
 	</section>
 	<section id="events">
 		<div> <img src="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM-Schedule-Flyer.jpg"> </div>
@@ -413,10 +452,6 @@
 			</ul>
 			<h6 style="flex: 100%; color: white;"><a href="http://BLANK.com" style="color: white;">Let us know</a> what else YOU would like dive into!&nbsp;</h6>
 		</div>
-	</section>
-	<section class="themes">
-		<h2>Our church themes are revealed each month!</h2>
-		<div> <img src="/files/OCHF/1A_2021_BREACHED/agape-sat.png" width="924" height="354" style="margin: auto;"> </div>
 	</section>
 </section>
 <rwt:content-module class="">
