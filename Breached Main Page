@@ -380,6 +380,7 @@
 			<li class="ann-item">
 				<h4 class="ann-item__heading">Guy's Campout!</h4>
 				<p class="ann-item__text">Mario's Campground (message Mario for the exact location)</p>
+				<p class="ann-item__text"><button id="connect-btn"><a href="https://celebration.churchofficechms.com/external/form/af919639-6b0b-4868-8c15-2fb77cfeaf6c">SIGNUP HERE</a></button></p>
 				<p class="ann-item__text">Remember to reference our guide on what to bring <a href="https://www.orangecountyfellowship.org/files/OCHF/1A_2021_BREACHED/BYAM_Survial_Night_Supplies_List.pdf">HERE AT THIS LINK</a></p>
 			</li>
 		</ul>
